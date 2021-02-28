@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
     - source: /
-      destination: /scripts/from-local-deploy
+      destination: /var/www/html/from-local-deploy
 permissions:
-    - object: /scripts/from-local-deploy
+    - object: /var/www/html/from-local-deploy
       pattern: "**"
       owner: apache
       group: apache
