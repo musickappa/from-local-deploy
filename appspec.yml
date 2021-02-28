@@ -1,0 +1,17 @@
+version: 0.0
+os: linux
+files:
+    - source: /
+      destination: /scripts/from-local-deploy
+permissions:
+    - object: /scripts/from-local-deploy
+      pattern: "**"
+      owner: apache
+      group: apache
+      mode: 755
+      type:
+        - file
+hooks:
+    BeforeInstall:
+     - location: scripts/initialize.sh
+       runas: root
